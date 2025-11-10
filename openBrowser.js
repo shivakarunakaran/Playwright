@@ -18,6 +18,10 @@ const { chromium } = require('playwright');
 
   console.log('Page Title:', await page.title());
 
+  await page.fill('//*[@id="email"]', 'karunakaran@erdster.co.in');
+  await page.fill('//*[@id="psw"]', 'gN7@pR5!yW3#sF8%');
+  await page.click('//*[@id="loginForm"]/div[3]/button');
+
   // Wait 3 seconds to see the browser
   await page.waitForTimeout(1000);
 
